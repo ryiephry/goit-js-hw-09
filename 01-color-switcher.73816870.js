@@ -1,0 +1,2 @@
+const t=document.getElementsByTagName("button")[0],e=document.getElementsByTagName("button")[1],n=document.body;function o(){return n.style.backgroundColor=`#${Math.floor(16777215*Math.random()).toString(16).padStart(6,0)}`}t.addEventListener("click",(function(){setInterval(o,1e3)})),e.addEventListener("click",(function(){t.disabled=!0,e.disabled=!1})),console.log("hi");
+//# sourceMappingURL=01-color-switcher.73816870.js.map
