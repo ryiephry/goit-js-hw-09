@@ -10,9 +10,23 @@ body {
   background-color: #fafafa;
   color: #212121;
   line-height: 1.5;
+
 }
 
 img {
   display: block;
   max-width: 100%;
+}
+
+.button-section {
+  display: flex;
+  justify-content: center;
+}
+
+.button-section button {
+  padding: 20px 40px 20px 40px;
+}
+
+.button-section button:first-child {
+  margin-right: 75px;
 }
