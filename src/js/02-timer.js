@@ -10,7 +10,7 @@ console.log(inputEl)
 
 // flatpickr(inputEl)
 
-flatpickr(inputEl, {});
+flatpickr("inputEl", {});
 
 
 
