@@ -3,7 +3,7 @@ const firstDelayEl = document.querySelector("input[name='delay']");
 const delayStepEl  = document.querySelector("input[name='step']");
 const amountEl     = document.querySelector("input[name='amount']");
 const createBtn    = document.querySelector("button[type='submit']");
-let liveStepValue  = ""//delayStepEl.value + amountEl.value;
+let liveStepValue  = []//delayStepEl.value + amountEl.value;
 let number = ""
 //console.log(liveStepValue)
 
@@ -26,12 +26,8 @@ function handleSubmit(e) {
       }
 }
 
-// gets the milliseconds for delay step 
-for (let i = 0; i < amountEl.value; i++){
-      number = i * delayStepEl.value
-  liveStepValue = number + parseFloat(firstDelayEl.value) 
-  console.log(liveStepValue)
-}
+// gets the 
+
 
 
 function createPromise(position, delay) {
@@ -41,8 +37,13 @@ function createPromise(position, delay) {
     //currentDelayStep()
 
 
-    console.log(delay)
-    
+    //console.log(delay)
+      
+    for (let i = 0; i < amountEl.value; i++) {
+      number = i * delayStepEl.value
+      liveStepValue.push(number + parseFloat(firstDelayEl.value))
+      // console.log(liveStepValue)
+    }
       setTimeout(() => {
 
         if (shouldResolve) {
@@ -55,23 +56,10 @@ function createPromise(position, delay) {
         }
       
           
-        }, liveStepValue
-      )
+      }, liveStepValue
     
- 
+      )
   })
 }  
-
-
-
-
-
-// function currentDelayStep() {
-//   for (let i = 0; i < amountEl.value; i++) {
-//     liveStepValue = delayStepEl.value * i
-//     console.log(liveStepValue)
-//   }
-// }
-// currentDelayStep()
 
 fromEl.addEventListener("submit", handleSubmit)
