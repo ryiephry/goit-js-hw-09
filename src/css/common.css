@@ -30,3 +30,23 @@ img {
 .button-section button:first-child {
   margin-right: 75px;
 }
+
+.form label {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.form button {
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+input {
+  margin-left: 30px;
+  border-width: 2px;
+  color: rgb(24, 42, 17);
+  border-color: darkgray;
+}
